@@ -8,7 +8,7 @@ A fun little Deep Reinforcement Learning Project for experimenting with strange 
 
 Post Retrieval Observer (PRO) networks are an experimental deep reinforcement learning architecture. After each action, the previous observation from the environment is transformed into its frequency representation using the Fast Fourier Transform (FFT) algorithm. 
 
-In addition to the classic implicit memory of a reinforcement learning agent (such as policy and value functions), PRO introduces an explicit memory module that represents a weighted superposition of past observations in the frequency domain. The weights are controlled directly by the agent through additional action heads.
+In addition to the classic implicit memory of a reinforcement learning agent (such as policy and value functions), PRO introduces an explicit memory module that represents the behaviour of the agents in the form of a weighted superposition of past observations in the frequency domain. The weights are controlled directly by the agent through additional action heads. As the name implies the observation from the environment is first passed through the retrieved memory before being observed by the agent.
 
 Rewards are computed based on the difference between the current reward and the average memorized reward. The current reward can be thought of as the loss between the currently selected observation from memory (via parameter control) and the actual observation from the outside world. The agent's observation can be considered as the linear time-invariant system response of the self-controlled memory and the external environment observation.
 
